@@ -55,13 +55,32 @@ export default function Home() {
 				</nav>
 				<button></button>
 			</header>
-			<section className={styles.hero}>
-				<img
-					className={styles.hero__leftShoe}
-					src="/img/shoes/shoe-left-hero.png"
-					alt="Shoe"
-				/>
-			</section>
+			<div className={styles.scrollSnap}>
+				<section className={`${styles.hero} ${styles.scrollSnap__item}`}>
+					<img
+						className={styles.hero__leftShoe}
+						src="/img/shoes/shoe-left-hero.png"
+						alt="Shoe"
+					/>
+					<img
+						className={styles.hero__rigthShoe}
+						src="/img/shoes/shoe-rigth-hero.png"
+						alt="Shoe"
+					/>
+				</section>
+				<section className={`${styles.hero} ${styles.scrollSnap__item}`}>
+					<img
+						className={styles.hero__leftShoe}
+						src="/img/shoes/shoe-left-hero.png"
+						alt="Shoe"
+					/>
+					<img
+						className={styles.hero__rigthShoe}
+						src="/img/shoes/shoe-rigth-hero.png"
+						alt="Shoe"
+					/>
+				</section>
+			</div>
 		</>
 	)
 }

@@ -7,6 +7,7 @@
 	align-items: center;
 	justify-content: space-between;
 	z-index: 50;
+	user-select: none;
 }
 
 .header__nav {
@@ -31,6 +32,33 @@
 .header__nav__ul__li {
 	list-style: none;
 	font-weight: 500;
+	transition: 0.2s;
+}
+
+.header__nav__ul__li:hover {
+	opacity: 0.5;
+}
+
+.scrollSnap {
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+}
+
+.scrollSnap::-webkit-scrollbar {
+	width: 0.4em;
+}
+
+.scrollSnap::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.scrollSnap::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.scrollSnap__item {
+	scroll-snap-align: center;
 }
 
 .hero {
@@ -43,4 +71,13 @@
 	position: absolute;
 	width: 35vw;
 	right: 5vw;
+	pointer-events: none;
+}
+
+.hero__rigthShoe {
+	position: absolute;
+	width: 35vw;
+	right: 25vw;
+	bottom: 0;
+	pointer-events: none;
 }
